@@ -11,6 +11,7 @@ RUN apk add --no-cache --update \
     ruby-irb \
     ruby-dev \
   && echo 'gem: --no-document' >> /etc/gemrc \
+  && gem install string-scrub -v 0.0.5 \
   && gem install fluentd -v 0.12.22 \
   && apk del build-base ruby-dev
 
