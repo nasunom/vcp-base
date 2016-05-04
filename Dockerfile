@@ -36,7 +36,7 @@ RUN wget -O /etc/apk/keys/andyshinn.rsa.pub \
   && /usr/glibc-compat/bin/localedef --force --inputfile POSIX --charmap UTF-8 C.UTF-8 || true \
   && echo "export LANG=C.UTF-8" > /etc/profile.d/locale.sh \
   && apk del glibc-i18n \
-  && rm -f /etc/apk/keys/andyshinn.rsa.pub glibc-*.apk \
+  && rm -f /etc/apk/keys/andyshinn.rsa.pub glibc-*.apk
 ENV LANG=C.UTF-8
 
 CMD ["/usr/bin/supervisord"]
