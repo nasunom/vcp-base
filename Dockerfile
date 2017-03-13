@@ -22,7 +22,7 @@ RUN apk add --no-cache --update \
 RUN wget https://github.com/google/cadvisor/releases/download/v0.24.1/cadvisor -O /usr/local/bin/cadvisor \
   && chmod +x /usr/local/bin/cadvisor
 
-RUN wget https://releases.hashicorp.com/serf/0.8.1/serf_0.8.1_linux_amd64.zip \
+RUN wget https://releases.hashicorp.com/serf/0.8.0/serf_0.8.0_linux_amd64.zip \
   && unzip serf*.zip -d /usr/local/bin/ \
   && rm serf*.zip
 
