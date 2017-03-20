@@ -34,6 +34,9 @@ RUN mkdir -p /var/run/sshd \
 
 COPY supervisord.conf /etc/supervisor.d/vcpbase.ini
 
+# if aufs is available in this kernel
+RUN sed -i 's/storage-driver=vfs/storage-driver=aufs/' /usr/local/bin/dockerd-entrypoint.sh
+
 ENV LANG=C.UTF-8
 
 CMD ["/usr/bin/supervisord"]
